@@ -62,6 +62,16 @@ class MainScreen extends StatelessWidget {
   }
 
   Widget _bigSquareButton() {
-    return BigSquareButton();
+    return Flexible(
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 8,
+          left: 8,
+          right: 8,
+          bottom: 0,
+        ),
+        child: BigSquareButton(),
+      ),
+    );
   }
 }
