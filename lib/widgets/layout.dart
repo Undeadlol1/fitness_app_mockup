@@ -21,7 +21,7 @@ class Layout extends StatelessWidget {
       scale: 1.1,
       initBottom: 20,
       initOpacity: 0.4,
-      offset: Offset(-300, -80),
+      offset: Offset(-307.5, -82),
       assetPath: 'assets/design_screenshot.webp',
       child: Scaffold(
         appBar: AppBar(
