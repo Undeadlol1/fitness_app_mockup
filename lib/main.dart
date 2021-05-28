@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fitness_app_mockup/screens/main_screen.dart';
+import 'package:get/get.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       home: MainScreen(),
       theme: ThemeData(
