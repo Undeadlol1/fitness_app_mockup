@@ -1,5 +1,6 @@
 import 'package:fitness_app_mockup/widgets/bit_square_button.dart';
 import 'package:fitness_app_mockup/widgets/layout.dart';
+import 'package:fitness_app_mockup/widgets/steps_counter.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -11,10 +12,7 @@ class MainScreen extends StatelessWidget {
       title: 'Progress',
       body: Column(
         children: [
-          SizedBox(
-            height: 200,
-            child: Placeholder(),
-          ),
+          StepsCounter(),
           Divider(color: Colors.transparent),
           Row(
             children: [
