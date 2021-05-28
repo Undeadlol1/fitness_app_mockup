@@ -16,20 +16,39 @@ class StepsCounter extends StatelessWidget {
           maxHeight: 175,
         ),
         decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.white,
-          ),
           shape: BoxShape.circle,
+          border: Border.all(color: Colors.white),
         ),
         child: Center(
-          child: Text(
-            '2450',
-            style: TextStyle(
-              // TODO change text colors in theme.
-              fontSize: 43,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Today\'s steps',
+                style: TextStyle(
+                  fontSize: 13,
+                  // TODO change text colors in theme.
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '2450',
+                style: TextStyle(
+                  fontSize: 43,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Goal: 10000',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),

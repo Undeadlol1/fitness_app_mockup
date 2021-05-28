@@ -13,7 +13,7 @@ class MainScreen extends StatelessWidget {
       body: Column(
         children: [
           StepsCounter(),
-          Divider(color: Colors.transparent),
+          SizedBox(height: 60),
           Row(
             children: [
               _horizontalMenuButton(),
