@@ -1,3 +1,4 @@
+import 'package:fitness_app_mockup/widgets/bit_square_button.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -61,10 +62,6 @@ class MainScreen extends StatelessWidget {
   }
 
   Widget _bigSquareButton() {
-    return Flexible(
-      child: Placeholder(
-        fallbackHeight: 180,
-      ),
-    );
+    return BigSquareButton();
   }
 }
