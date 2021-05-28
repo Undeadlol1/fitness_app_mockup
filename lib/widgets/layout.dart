@@ -1,6 +1,7 @@
 import 'package:fitness_app_mockup/states/viewer_state.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pixel_perfect/pixel_perfect.dart';
 
 class Layout extends StatelessWidget {
   final String title;
@@ -15,28 +16,44 @@ class Layout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(this.title),
-        actions: [_buildUserAvatar()],
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: [_loginOrLogoutButton()],
+    Color backGroundColor = Colors.black;
+    return PixelPerfect(
+      scale: 1.1,
+      initBottom: 20,
+      initOpacity: 0.4,
+      offset: Offset(-300, -80),
+      assetPath: 'assets/design_screenshot.webp',
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: backGroundColor,
+          title: Center(child: Text(this.title)),
+          actions: [
+            _buildUserAvatar(),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.more_vert),
+            ),
+          ],
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          child: this.body,
-          padding: const EdgeInsets.only(
-            top: 20,
-            left: 15,
-            right: 15,
-            bottom: 0,
+        drawer: Drawer(
+          child: ListView(
+            children: [_loginOrLogoutButton()],
           ),
         ),
+        body: SingleChildScrollView(
+          child: Container(
+            child: this.body,
+            color: backGroundColor,
+            padding: const EdgeInsets.only(
+              top: 20,
+              left: 15,
+              right: 15,
+              bottom: 0,
+            ),
+          ),
+        ),
+        floatingActionButton: this.floatingActionButton,
       ),
-      floatingActionButton: this.floatingActionButton,
     );
   }
 
