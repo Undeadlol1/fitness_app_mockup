@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fitness_app_mockup/screens/main_screen.dart';
-import 'package:pixel_perfect/pixel_perfect.dart';
 
 void main() => runApp(MyApp());
 
