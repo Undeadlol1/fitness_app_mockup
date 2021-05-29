@@ -1,17 +1,15 @@
-import 'package:fitness_app_mockup/states/viewer_state.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:pixel_perfect/pixel_perfect.dart';
+import 'package:fitness_app_mockup/states/viewer_state.dart';
 
 class Layout extends StatelessWidget {
   final String title;
   final Widget child;
-  final Widget? floatingActionButton;
   const Layout({
     Key? key,
     required this.title,
     required this.child,
-    this.floatingActionButton,
   }) : super(key: key);
 
   @override
@@ -25,6 +23,7 @@ class Layout extends StatelessWidget {
       assetPath: 'assets/design_screenshot.webp',
       child: Scaffold(
         appBar: AppBar(
+          leading: Icon(Icons.share),
           backgroundColor: backGroundColor,
           title: Center(child: Text(this.title)),
           actions: [
@@ -34,11 +33,6 @@ class Layout extends StatelessWidget {
               icon: Icon(Icons.more_vert),
             ),
           ],
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: [_loginOrLogoutButton()],
-          ),
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -52,7 +46,6 @@ class Layout extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButton: this.floatingActionButton,
       ),
     );
   }
@@ -68,24 +61,6 @@ class Layout extends StatelessWidget {
         onTap: () {},
         // onTap: () => Get.toNamed(MainScreen.path),
         child: viewerPhoto.isEmpty ? null : Image.network(viewerPhoto),
-      ),
-    );
-  }
-
-  Widget _loginOrLogoutButton() {
-    final viewerState = Get.find<ViewerState>();
-
-    if (viewerState.isLoading) {
-      return Container();
-    }
-
-    final bool isViewerSignedIn = viewerState.viewer != null;
-    return ListTile(
-      onTap: () {},
-      // onTap: isViewerSignedIn ? logOut : () => Get.toNamed(SignInScreen.path),
-      title: Text(
-        isViewerSignedIn ? 'Выйти' : 'Войти',
-        textAlign: TextAlign.center,
       ),
     );
   }
