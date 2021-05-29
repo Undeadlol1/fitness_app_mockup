@@ -1,5 +1,6 @@
 import 'package:fitness_app_mockup/widgets/bit_square_button.dart';
 import 'package:fitness_app_mockup/widgets/layout.dart';
+import 'package:fitness_app_mockup/widgets/stats_text.dart';
 import 'package:fitness_app_mockup/widgets/steps_counter.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +16,11 @@ class MainScreen extends StatelessWidget {
           StepsCounter(),
           SizedBox(height: 60),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _horizontalMenuButton(),
-              _horizontalMenuButton(),
-              _horizontalMenuButton(),
+              StatsText(title: '30', subtitle: 'Days'),
+              StatsText(title: '45.2%', subtitle: 'Improvement'),
+              StatsText(title: '125K', subtitle: 'Steps'),
             ],
           ),
           Divider(color: Colors.transparent),
@@ -36,14 +38,6 @@ class MainScreen extends StatelessWidget {
             ],
           )
         ],
-      ),
-    );
-  }
-
-  Widget _horizontalMenuButton() {
-    return Flexible(
-      child: Placeholder(
-        fallbackHeight: 60,
       ),
     );
   }
