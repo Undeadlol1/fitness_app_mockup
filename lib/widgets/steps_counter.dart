@@ -27,8 +27,6 @@ class StepsCounter extends StatelessWidget {
                 'Today\'s steps',
                 style: TextStyle(
                   fontSize: 13,
-                  // TODO change text colors in theme.
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -36,7 +34,6 @@ class StepsCounter extends StatelessWidget {
                 '2450',
                 style: TextStyle(
                   fontSize: 43,
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -44,7 +41,6 @@ class StepsCounter extends StatelessWidget {
                 'Goal: 10000',
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
