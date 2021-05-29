@@ -5,12 +5,12 @@ import 'package:pixel_perfect/pixel_perfect.dart';
 
 class Layout extends StatelessWidget {
   final String title;
-  final Widget body;
+  final Widget child;
   final Widget? floatingActionButton;
   const Layout({
     Key? key,
     required this.title,
-    required this.body,
+    required this.child,
     this.floatingActionButton,
   }) : super(key: key);
 
@@ -42,7 +42,7 @@ class Layout extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
-            child: this.body,
+            child: this.child,
             color: backGroundColor,
             padding: const EdgeInsets.only(
               top: 20,

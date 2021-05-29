@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Layout(
       title: 'Progress',
-      body: Column(
+      child: Column(
         children: [
           StepsCounter(),
           SizedBox(height: 60),
