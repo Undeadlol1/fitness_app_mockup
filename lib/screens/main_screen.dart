@@ -44,7 +44,7 @@ class _SquareButtons extends StatelessWidget {
                 title: 'Active',
                 icon: Icon(Icons.cancel),
                 subtitle: '2 Times a day',
-                gradientColor: Colors.blue,
+                gradientColor: Colors.blueAccent,
               ),
             ),
             _buttonWrapper(
@@ -52,7 +52,7 @@ class _SquareButtons extends StatelessWidget {
                 title: 'Running',
                 icon: Icon(Icons.cancel),
                 subtitle: '3 Times a day',
-                gradientColor: Colors.blue,
+                gradientColor: Colors.yellowAccent,
               ),
             ),
           ],
@@ -65,7 +65,7 @@ class _SquareButtons extends StatelessWidget {
                 title: 'Study',
                 icon: Icon(Icons.cancel),
                 subtitle: '2 Times a day',
-                gradientColor: Colors.blue,
+                gradientColor: Colors.greenAccent,
               ),
             ),
             _buttonWrapper(
@@ -73,7 +73,7 @@ class _SquareButtons extends StatelessWidget {
                 title: 'Dinner',
                 icon: Icon(Icons.cancel),
                 subtitle: '1 Time a day',
-                gradientColor: Colors.blue,
+                gradientColor: Colors.redAccent,
               ),
             ),
           ],
@@ -83,14 +83,15 @@ class _SquareButtons extends StatelessWidget {
   }
 
   Widget _buttonWrapper({required Widget child}) {
+    final double horizontalPadding = 14.0;
     return Flexible(
       child: Padding(
         child: child,
-        padding: const EdgeInsets.only(
+        padding: EdgeInsets.only(
           top: 8,
-          left: 8,
-          right: 8,
           bottom: 0,
+          left: horizontalPadding,
+          right: horizontalPadding,
         ),
       ),
     );

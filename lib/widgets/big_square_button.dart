@@ -16,7 +16,7 @@ class BigSquareButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 160,
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -24,6 +24,7 @@ class BigSquareButton extends StatelessWidget {
           icon,
           Column(
             children: [
+              SizedBox(height: 27),
               Text(
                 title,
                 style: TextStyle(
@@ -31,7 +32,7 @@ class BigSquareButton extends StatelessWidget {
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Text(
                 subtitle,
                 style: TextStyle(
