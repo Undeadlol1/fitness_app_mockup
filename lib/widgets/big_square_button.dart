@@ -1,13 +1,48 @@
 import 'package:flutter/material.dart';
 
 class BigSquareButton extends StatelessWidget {
+  final Widget icon;
+  final String title;
+  final String subtitle;
   final Color gradientColor;
-  BigSquareButton({Key? key, required this.gradientColor}) : super(key: key);
+  BigSquareButton({
+    Key? key,
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.gradientColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 180,
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          icon,
+          Column(
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                subtitle,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
       decoration: _decoration,
     );
   }

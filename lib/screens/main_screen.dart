@@ -24,34 +24,75 @@ class MainScreen extends StatelessWidget {
             ],
           ),
           Divider(color: Colors.transparent),
-          Row(
-            children: [
-              _bigSquareButton(),
-              _bigSquareButton(),
-            ],
-          ),
-          Divider(color: Colors.transparent),
-          Row(
-            children: [
-              _bigSquareButton(),
-              _bigSquareButton(),
-            ],
-          )
+          _squareButtons(),
         ],
       ),
     );
   }
+}
 
-  Widget _bigSquareButton() {
+class _squareButtons extends StatelessWidget {
+  const _squareButtons({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Row(
+          children: [
+            _buttonWrapper(
+              child: BigSquareButton(
+                title: 'Active',
+                icon: Icon(Icons.cancel),
+                subtitle: '2 Times a day',
+                gradientColor: Colors.blue,
+              ),
+            ),
+            _buttonWrapper(
+              child: BigSquareButton(
+                title: 'Running',
+                icon: Icon(Icons.cancel),
+                subtitle: '3 Times a day',
+                gradientColor: Colors.blue,
+              ),
+            ),
+          ],
+        ),
+        Divider(color: Colors.transparent),
+        Row(
+          children: [
+            _buttonWrapper(
+              child: BigSquareButton(
+                title: 'Study',
+                icon: Icon(Icons.cancel),
+                subtitle: '2 Times a day',
+                gradientColor: Colors.blue,
+              ),
+            ),
+            _buttonWrapper(
+              child: BigSquareButton(
+                title: 'Dinner',
+                icon: Icon(Icons.cancel),
+                subtitle: '1 Time a day',
+                gradientColor: Colors.blue,
+              ),
+            ),
+          ],
+        )
+      ],
+    );
+  }
+
+  Widget _buttonWrapper({required Widget child}) {
     return Flexible(
       child: Padding(
+        child: child,
         padding: const EdgeInsets.only(
           top: 8,
           left: 8,
           right: 8,
           bottom: 0,
         ),
-        child: BigSquareButton(gradientColor: Colors.blue),
       ),
     );
   }

@@ -5,7 +5,7 @@ import 'package:fitness_app_mockup/screens/main_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
-  final bool isStorybookEnabled = true;
+  final bool isStorybookEnabled = false;
   runApp(isStorybookEnabled ? Storybook() : MyApp());
 }
 
