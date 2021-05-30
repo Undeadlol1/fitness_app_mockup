@@ -16,7 +16,16 @@ class Storybook extends StatelessWidget {
         'default',
         (ctx) => Container(
           width: 200,
-          child: BigSquareButton(),
+          height: 300,
+          color: Colors.green,
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Center(child: Text('This is a background')),
+              SizedBox(height: 20),
+              BigSquareButton(),
+            ],
+          ),
         ),
       );
 
