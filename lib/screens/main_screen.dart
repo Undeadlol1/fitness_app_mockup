@@ -10,7 +10,6 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Layout(
-      title: 'Progress',
       child: Column(
         children: [
           StepsCounter(),

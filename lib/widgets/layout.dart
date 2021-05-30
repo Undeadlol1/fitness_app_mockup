@@ -8,7 +8,7 @@ class Layout extends StatelessWidget {
   final Widget child;
   const Layout({
     Key? key,
-    required this.title,
+    this.title = '',
     required this.child,
   }) : super(key: key);
 
@@ -25,7 +25,7 @@ class Layout extends StatelessWidget {
         appBar: AppBar(
           leading: Icon(Icons.share),
           backgroundColor: backGroundColor,
-          title: Center(child: Text(this.title)),
+          title: Center(child: Text(title)),
           actions: [
             _buildUserAvatar(),
             IconButton(
