@@ -23,15 +23,15 @@ class MainScreen extends StatelessWidget {
             ],
           ),
           Divider(color: Colors.transparent),
-          _squareButtons(),
+          _SquareButtons(),
         ],
       ),
     );
   }
 }
 
-class _squareButtons extends StatelessWidget {
-  const _squareButtons({Key? key}) : super(key: key);
+class _SquareButtons extends StatelessWidget {
+  const _SquareButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
