@@ -51,7 +51,7 @@ class MainScreen extends StatelessWidget {
           right: 8,
           bottom: 0,
         ),
-        child: BigSquareButton(),
+        child: BigSquareButton(gradientColor: Colors.blue),
       ),
     );
   }

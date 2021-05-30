@@ -23,7 +23,7 @@ class Storybook extends StatelessWidget {
               SizedBox(height: 20),
               Center(child: Text('This is a background')),
               SizedBox(height: 20),
-              BigSquareButton(),
+              BigSquareButton(gradientColor: Colors.blue),
             ],
           ),
         ),
