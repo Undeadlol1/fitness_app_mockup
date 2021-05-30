@@ -1,4 +1,4 @@
-import 'package:fitness_app_mockup/widgets/bit_square_button.dart';
+import 'package:fitness_app_mockup/widgets/big_square_button.dart';
 import 'package:fitness_app_mockup/widgets/layout.dart';
 import 'package:fitness_app_mockup/widgets/stats_text.dart';
 import 'package:fitness_app_mockup/widgets/steps_counter.dart';

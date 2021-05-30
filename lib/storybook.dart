@@ -1,5 +1,5 @@
 import 'package:dashbook/dashbook.dart';
-import 'package:fitness_app_mockup/widgets/bit_square_button.dart';
+import 'package:fitness_app_mockup/widgets/big_square_button.dart';
 import 'package:fitness_app_mockup/widgets/stats_text.dart';
 import 'package:flutter/material.dart';
 
