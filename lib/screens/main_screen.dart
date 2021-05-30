@@ -13,7 +13,7 @@ class MainScreen extends StatelessWidget {
       child: Column(
         children: [
           StepsCounter(),
-          SizedBox(height: 60),
+          SizedBox(height: 70),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
               StatsText(title: '125K', subtitle: 'Steps'),
             ],
           ),
-          Divider(color: Colors.transparent),
+          SizedBox(height: 27),
           _SquareButtons(),
         ],
       ),

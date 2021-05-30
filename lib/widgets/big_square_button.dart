@@ -19,7 +19,7 @@ class BigSquareButton extends StatelessWidget {
       height: 180,
       width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           icon,
           Column(

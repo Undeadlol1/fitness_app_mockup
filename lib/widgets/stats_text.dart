@@ -16,6 +16,7 @@ class StatsText extends StatelessWidget {
     return Column(
       children: [
         Text(title, style: textTheme.headline4),
+        SizedBox(height: 10),
         Text(subtitle, style: textTheme.caption),
       ],
     );
