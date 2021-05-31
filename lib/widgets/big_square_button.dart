@@ -50,6 +50,7 @@ class BigSquareButton extends StatelessWidget {
 
   get _decoration {
     return BoxDecoration(
+      color: Color(0xff0B0A0F),
       borderRadius: BorderRadius.circular(30),
       border: Border.all(color: Colors.transparent),
       gradient: LinearGradient(

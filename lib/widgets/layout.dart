@@ -14,11 +14,11 @@ class Layout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color backGroundColor = Colors.black;
+    Color backGroundColor = Color(0xff080810);
     return PixelPerfect(
       scale: 1.1,
       initBottom: 20,
-      initOpacity: 0.4,
+      initOpacity: 0.2,
       offset: Offset(-307.5, -82),
       assetPath: 'assets/design_screenshot.webp',
       child: Scaffold(
@@ -58,8 +58,6 @@ class Layout extends StatelessWidget {
       width: 35,
       margin: const EdgeInsets.only(right: 15),
       child: InkWell(
-        onTap: () {},
-        // onTap: () => Get.toNamed(MainScreen.path),
         child: viewerPhoto.isEmpty ? null : Image.network(viewerPhoto),
       ),
     );
