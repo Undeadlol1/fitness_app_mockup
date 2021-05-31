@@ -7,7 +7,6 @@ class StepsCounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
       child: Container(
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.only(top: 38),
