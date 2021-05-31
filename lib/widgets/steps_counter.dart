@@ -8,6 +8,9 @@ class StepsCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
+        child: Center(
+          child: _buildText(),
+        ),
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.only(top: 38),
         constraints: BoxConstraints(
@@ -18,35 +21,36 @@ class StepsCounter extends StatelessWidget {
           shape: BoxShape.circle,
           border: Border.all(color: Colors.white),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Today\'s steps',
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                '2450',
-                style: TextStyle(
-                  fontSize: 43,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                'Goal: 10000',
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
+      ),
+    );
+  }
+
+  Widget _buildText() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Today\'s steps',
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.bold,
           ),
         ),
-      ),
+        Text(
+          '2450',
+          style: TextStyle(
+            fontSize: 43,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          'Goal: 10000',
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
     );
   }
 }
