@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:dashbook/dashbook.dart';
+import 'package:fitness_app_mockup/widgets/bezier_lines_wrapper.dart';
 import 'package:fitness_app_mockup/widgets/big_square_button.dart';
 import 'package:fitness_app_mockup/widgets/stats_text.dart';
 import 'package:fitness_app_mockup/widgets/steps_counter.dart';
-import 'package:flutter/material.dart';
 
 final _dashbook = Dashbook();
 
@@ -11,6 +12,10 @@ class Storybook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    _dashbook.storiesOf('BezierLinesWrapper')
+      ..decorator(_GreyBackgroundDecorator())
+      ..add('default', (ctx) => BezierLinesWrapper());
+
     _dashbook.storiesOf('StepsCounter')
       ..decorator(_GreyBackgroundDecorator())
       ..add('default', (ctx) => StepsCounter());
