@@ -6,10 +6,11 @@ class StepsCounter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = Color(0xff030305);
     return InkWell(
       child: Container(
         child: Center(
-          child: _buildText(),
+          child: _buildTexts(),
         ),
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.only(top: 38),
@@ -19,13 +20,20 @@ class StepsCounter extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          border: Border.all(color: Colors.white),
+          color: backgroundColor,
+          gradient: LinearGradient(
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+            begin: const FractionalOffset(0.0, 1.0),
+            end: const FractionalOffset(1.0, 0.01),
+            colors: [backgroundColor, Color(0xff545357)],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildText() {
+  Widget _buildTexts() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
