@@ -1,3 +1,4 @@
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:dashbook/dashbook.dart';
@@ -7,8 +8,6 @@ import 'package:fitness_app_mockup/states/viewer_state.dart';
 import 'package:fitness_app_mockup/widgets/steps_counter.dart';
 import 'package:fitness_app_mockup/widgets/big_square_button.dart';
 import 'package:fitness_app_mockup/widgets/bezier_lines_wrapper.dart';
-
-final _dashbook = Dashbook();
 
 class Storybook extends StatefulWidget {
   const Storybook({Key? key}) : super(key: key);
@@ -26,13 +25,28 @@ class _StorybookState extends State<Storybook> {
 
   @override
   Widget build(BuildContext context) {
+    final _dashbook = Dashbook();
     _dashbook.storiesOf('MainScreen')
       ..decorator(_GreyBackgroundDecorator())
       ..add('default', (ctx) => MainScreen());
 
     _dashbook.storiesOf('BezierLinesWrapper')
-      ..decorator(_GreyBackgroundDecorator())
-      ..add('default', (ctx) => BezierLinesWrapper());
+      ..decorator(CenterDecorator())
+      ..add(
+        'default',
+        (ctx) => BezierLinesWrapper(
+          child: Container(
+            color: Colors.red,
+            child: Text('This is a child'),
+            constraints: BoxConstraints(
+              maxWidth: 100,
+              maxHeight: 100,
+              minHeight: 100,
+              minWidth: 100,
+            ),
+          ),
+        ),
+      );
 
     _dashbook.storiesOf('StepsCounter')
       ..decorator(_GreyBackgroundDecorator())
@@ -72,7 +86,7 @@ class _StorybookState extends State<Storybook> {
         ),
       );
 
-    return Container(child: _dashbook);
+    return _dashbook;
   }
 }
 
