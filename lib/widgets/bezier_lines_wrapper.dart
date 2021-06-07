@@ -2,30 +2,23 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class BezierLinesWrapper extends StatelessWidget {
-  final double angle;
-  final bool isTailVisible;
   final double animationProgressInPercentages;
   BezierLinesWrapper({
     Key? key,
-    this.angle = 0,
-    this.isTailVisible = true,
     this.animationProgressInPercentages = 0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter: _StarPainter(isTailVisible: isTailVisible),
+      painter: _Painter(),
     );
   }
 }
 
-class _StarPainter extends CustomPainter {
+class _Painter extends CustomPainter {
   late Size _size;
   late Canvas _canvas;
-
-  bool isTailVisible;
-  _StarPainter({this.isTailVisible = true});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -33,7 +26,6 @@ class _StarPainter extends CustomPainter {
     _canvas = canvas;
 
     _drawStarHead();
-    if (isTailVisible) _drawStarTail();
   }
 
   void _drawStarHead() {
